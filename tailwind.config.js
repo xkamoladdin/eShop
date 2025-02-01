@@ -6,6 +6,17 @@ export default {
   ],
   theme: {
     extend: {},
+    container: {
+      center:true,
+      padding:'10px'
+    },
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1190px',
+    }
+
   },
   plugins: [],
 }
