@@ -4,6 +4,7 @@ import Today from'../../Components/Today-Cart'
 import BlackCard from '../../Components/BlackCard'
 import Featured from '../../Components/Featured'
 import Categories from '../../Components/Categories'
+import ThisMonth from '../../Components/ThisMonth'
 
 export default class index extends Component {
   render() {
@@ -12,6 +13,7 @@ export default class index extends Component {
         <Header/>
         <Today />
         <Categories />
+        <ThisMonth />
         <BlackCard />
         <Featured />
       </div>

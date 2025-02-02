@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Smartphone } from 'lucide-react';
+import { Smartphone, Laptop, Watch, Camera, Headphones, Gamepad } from 'lucide-react';
 
 export default class index extends Component {
   render() {
@@ -14,7 +14,7 @@ export default class index extends Component {
           <h2 className='text-[36px] font-semibold mb-[60px]'>Browse By Category</h2>
           <Swiper
           spaceBetween={30}
-          slidesPerView={4}
+          slidesPerView={6}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           className="w-full mb-[70px]"
@@ -27,44 +27,32 @@ export default class index extends Component {
             </SwiperSlide>
             <SwiperSlide className="w-[170px] border p-[24px]">
                 <div className='text-center h-[145px] flex justify-center items-center flex-col'>
-                    <Smartphone size={60} />
-                    <h3 className='mt-[20px]'>Phones</h3>
+                    <Laptop size={60} />
+                    <h3 className='mt-[20px]'>Computers</h3>
                 </div>
             </SwiperSlide>
             <SwiperSlide className="w-[170px] border p-[24px]">
                 <div className='text-center h-[145px] flex justify-center items-center flex-col'>
-                    <Smartphone size={60} />
-                    <h3 className='mt-[20px]'>Phones</h3>
+                    <Watch size={60} />
+                    <h3 className='mt-[20px]'>SmartWatch</h3>
                 </div>
             </SwiperSlide>
             <SwiperSlide className="w-[170px] border p-[24px]">
                 <div className='text-center h-[145px] flex justify-center items-center flex-col'>
-                    <Smartphone size={60} />
-                    <h3 className='mt-[20px]'>Phones</h3>
+                    <Camera size={60} />
+                    <h3 className='mt-[20px]'>Camera</h3>
                 </div>
             </SwiperSlide>
             <SwiperSlide className="w-[170px] border p-[24px]">
                 <div className='text-center h-[145px] flex justify-center items-center flex-col'>
-                    <Smartphone size={60} />
-                    <h3 className='mt-[20px]'>Phones</h3>
+                    <Headphones size={60} />
+                    <h3 className='mt-[20px]'>HeadPhones</h3>
                 </div>
             </SwiperSlide>
             <SwiperSlide className="w-[170px] border p-[24px]">
                 <div className='text-center h-[145px] flex justify-center items-center flex-col'>
-                    <Smartphone size={60} />
-                    <h3 className='mt-[20px]'>Phones</h3>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide className="w-[170px] border p-[24px]">
-                <div className='text-center h-[145px] flex justify-center items-center flex-col'>
-                    <Smartphone size={60} />
-                    <h3 className='mt-[20px]'>Phones</h3>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide className="w-[170px] border p-[24px]">
-                <div className='text-center h-[145px] flex justify-center items-center flex-col'>
-                    <Smartphone size={60} />
-                    <h3 className='mt-[20px]'>Phones</h3>
+                    <Gamepad size={60} />
+                    <h3 className='mt-[20px]'>Gaming</h3>
                 </div>
             </SwiperSlide>
             <SwiperSlide className="w-[170px] border p-[24px]">
