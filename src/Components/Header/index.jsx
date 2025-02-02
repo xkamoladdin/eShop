@@ -8,7 +8,7 @@ export default class index extends Component {
   render() {
     return (
       <div className='container mt-[40px] flex justify-between mb-[140px]'>
-        <div className='border-r pr-5'>
+        <div className='border-r pr-[55px]'>
             <ul className='flex flex-col gap-[16px]'>
                 <li>
                     <NavLink to={'/'}>Woman’s Fashion</NavLink>
