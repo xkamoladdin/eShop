@@ -5,30 +5,40 @@ import Game1 from'../../assets/game-card1.png'
 import { NavLink } from "react-router-dom";
 
 export default class Index extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      timeLeft: 300,
+    constructor(props) {
+      super(props);
+      this.state = {
+        timeLeft: 300000, // 300000 sekund (taxminan 3.5 kun)
+      };
+    }
+  
+    componentDidMount() {
+      this.timer = setInterval(() => {
+        this.setState((prevState) => {
+          if (prevState.timeLeft <= 1) {
+            clearInterval(this.timer);
+            return { timeLeft: 0 };
+          }
+          return { timeLeft: prevState.timeLeft - 1 };
+        });
+      }, 1000);
+    }
+  
+    componentWillUnmount() {
+      clearInterval(this.timer);
+    }
+  
+    formatTime = (seconds) => {
+      const days = Math.floor(seconds / (60 * 60 * 24));
+      const hours = Math.floor((seconds % (60 * 60 * 24)) / (60 * 60));
+      const minutes = Math.floor((seconds % (60 * 60)) / 60);
+      const secs = seconds % 60;
+  
+      return `${days} : ${hours < 10 ? "0" : ""}${hours} : ${
+        minutes < 10 ? "0" : ""
+      }${minutes} : ${secs < 10 ? "0" : ""}${secs}`;
     };
-  }
-
-  componentDidMount() {
-    this.timer = setInterval(() => {
-      this.setState((prevState) => ({
-        timeLeft: prevState.timeLeft > 0 ? prevState.timeLeft - 1 : 0,
-      }));
-    }, 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timer);
-  }
-
-  formatTime = (seconds) => {
-    const minutes = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${minutes} : ${secs < 10 ? "0" : ""}${secs} : 00`;
-  };
+  
 
   render() {
     return (
@@ -40,7 +50,7 @@ export default class Index extends Component {
           </h2>
           <div className="flex gap-[87px] mb-[40px]">
             <h1 className="text-[36px] font-semibold">Flash Sales</h1>
-            <p className="text-3xl mt-2">{this.formatTime(this.state.timeLeft)}</p>
+            <p className="text-3xl mt-2 font-bold">{this.formatTime(this.state.timeLeft)}</p>
           </div>
         </div>
         <Swiper
