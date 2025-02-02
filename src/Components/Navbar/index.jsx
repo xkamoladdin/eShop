@@ -18,9 +18,9 @@ export default class index extends Component {
             <NavLink className='text-[24px] font-bold' to={'/'}>Exclusive</NavLink>
             <ul className='flex gap-[48px]'>
                 <NavLink to={'/'}>Home</NavLink>
-                <NavLink to={''}>Contact</NavLink>
-                <NavLink to={''}>About</NavLink>
-                <NavLink to={''}>Sign Up</NavLink>
+                <NavLink to={'/contact'}>Contact</NavLink>
+                <NavLink to={'/about'}>About</NavLink>
+                <NavLink to={'/signup'}>Sign Up</NavLink>
             </ul>
             <div>
                 <input type="text" placeholder='What are you looking for?' />
