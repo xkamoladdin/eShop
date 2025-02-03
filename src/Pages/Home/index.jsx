@@ -5,6 +5,7 @@ import BlackCard from '../../Components/BlackCard'
 import Featured from '../../Components/Featured'
 import Categories from '../../Components/Categories'
 import ThisMonth from '../../Components/ThisMonth'
+import OurProducts from '../../Components/OurProducts'
 
 export default class index extends Component {
   render() {
@@ -15,6 +16,7 @@ export default class index extends Component {
         <Categories />
         <ThisMonth />
         <BlackCard />
+        <OurProducts />
         <Featured />
       </div>
     )
