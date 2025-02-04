@@ -6,6 +6,7 @@ import Featured from '../../Components/Featured'
 import Categories from '../../Components/Categories'
 import ThisMonth from '../../Components/ThisMonth'
 import OurProducts from '../../Components/OurProducts'
+import Threeicon from '../../Components/Threeicon'
 
 export default class index extends Component {
   render() {
@@ -18,6 +19,7 @@ export default class index extends Component {
         <BlackCard />
         <OurProducts />
         <Featured />
+        <Threeicon />
       </div>
     )
   }
