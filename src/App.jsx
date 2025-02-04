@@ -11,6 +11,7 @@ import Home from'./Pages/Home'
 import Wishlist from'./Pages/Wishlist'
 import Singup from'./Pages/Singup'
 import Login from'./Pages/Login'
+import Footer from'./Components/Footer'
 
 export default class App extends Component {
   render() {
@@ -31,6 +32,7 @@ export default class App extends Component {
           <Route path={'/login'} component={Navbar} />
         </Switch>
 
+
         <Switch>
 
           <Route exact path={'/'} component={Home} />
@@ -47,6 +49,19 @@ export default class App extends Component {
           </Route>
           
         </Switch>
+
+        <Switch>
+          <Route exact path={'/'} component={Footer} />
+          <Route path={'/about'} component={Footer} />
+          <Route path={'/account'} component={Footer} />
+          <Route path={'/cart'} component={Footer} />
+          <Route path={'/checkout'} component={Footer} />
+          <Route path={'/contact'} component={Footer} />
+          <Route path={'/wishlist'} component={Footer} />
+          <Route path={'/signup'} component={Footer} />
+          <Route path={'/login'} component={Footer} />
+        </Switch>
+        
       </div>
     )
   }
