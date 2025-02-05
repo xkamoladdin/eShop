@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import Side from '../../assets/Side.png'
+import Group from '../../assets/Group.png'
+import Moneybag from '../../assets/Moneybag.png'
+import Sale from '../../assets/Sale.png'
+import Shopping from '../../assets/Shopping.png'
 
 export default class index extends Component {
   render() {
@@ -15,6 +19,29 @@ export default class index extends Component {
           </div>
           <div>
             <img src={Side} alt="" />
+          </div>
+        </div>
+
+        <div className='flex justify-between items-center text-center'>
+          <div>
+            <img className='bg-[#000] p-[12px] my-[24px] mx-[100px] rounded-full' src={Group} alt="" />
+            <h4>10.5k</h4>
+            <p>Sallers active our site</p>
+          </div>
+          <div>
+            <img className='my-[24px] mx-[100px] rounded-full' src={Sale} alt="" />
+            <h4>33k</h4>
+            <p>Mopnthly Produduct Sale</p>
+          </div>
+          <div>
+            <img className='bg-[#000] p-[12px] my-[24px] mx-[100px] rounded-full' src={Shopping} alt="" />
+            <h4>45.5k</h4>
+            <p>Customer active in our site</p>
+          </div>
+          <div>
+            <img className='bg-[#000] p-[12px] my-[24px] mx-[100px] rounded-full' src={Moneybag} alt="" />
+            <h4>25k</h4>
+            <p>Anual gross sale in our site</p>
           </div>
         </div>
       </div>

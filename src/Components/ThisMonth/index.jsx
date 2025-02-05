@@ -8,6 +8,8 @@ import Month1 from'../../assets/month-card1.png'
 import Month2 from'../../assets/month-card2.png'
 import Month3 from'../../assets/month-card3.png'
 import Month4 from'../../assets/month-card4.png'
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
 
 
 
@@ -30,10 +32,13 @@ export default class Index extends Component {
           </div>
         </div>
         <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={30}
           slidesPerView={4}
-          onSlideChange={() => console.log("slide change")}
+          navigation
+          pagination={{ clickable: true }}
           onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
           className="w-full mb-[140px]"
         >
             <SwiperSlide className="w-[270px]">

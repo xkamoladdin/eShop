@@ -7,7 +7,14 @@ import Game3 from'../../assets/game-card3.png'
 import Game4 from'../../assets/game-card4.png'
 import { NavLink } from "react-router-dom";
 import { Heart, Eye } from 'lucide-react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 export default class Index extends Component {
     constructor(props) {
       super(props);
@@ -58,10 +65,13 @@ export default class Index extends Component {
           </div>
         </div>
         <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={30}
           slidesPerView={4}
-          onSlideChange={() => console.log("slide change")}
+          navigation
+          pagination={{ clickable: true }}
           onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
           className="w-full mb-[60px]"
         >
             <SwiperSlide className="w-[270px]">
