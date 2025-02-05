@@ -11,6 +11,8 @@ import ProCard6 from'../../assets/procard6.png'
 import ProCard7 from'../../assets/procard7.png'
 import ProCard8 from'../../assets/procard8.png'
 import { NavLink } from "react-router-dom";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
 
 
 export default class index extends Component {
@@ -30,10 +32,13 @@ export default class index extends Component {
 
 
         <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={30}
           slidesPerView={4}
-          onSlideChange={() => console.log("slide change")}
+          navigation
+        //   pagination={{ clickable: true }}
           onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
           className="w-full mb-[60px]"
         >
             <SwiperSlide className="w-[270px]">
@@ -87,10 +92,13 @@ export default class index extends Component {
         </Swiper>
 
         <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={30}
           slidesPerView={4}
-          onSlideChange={() => console.log("slide change")}
+          navigation
+        //   pagination={{ clickable: true }}
           onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
           className="w-full mb-[60px]"
         >
             <SwiperSlide className="w-[270px]">
