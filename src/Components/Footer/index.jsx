@@ -15,7 +15,7 @@ export default class index extends Component {
                 <p>Subscribe</p>
                 <p>Get 10% off your first order</p>
                 <div className='w-[217px] py-[12px] flex items-center justify-between px-[16px] border'>
-                    <input type="text" className='bg-transparent' name="" id="" placeholder='Enter your email' />
+                    <input type="text" className='bg-transparent outline-none' name="" id="" placeholder='Enter your email' />
                     <SendHorizontal className='text-white' />
                 </div>
             </div>

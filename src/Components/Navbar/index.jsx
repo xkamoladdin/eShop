@@ -62,12 +62,12 @@ export default class Index extends Component {
               <NavLink to='/cart'>
                 <ShoppingCart />
               </NavLink>
-              <div className='relative' onMouseEnter={this.enter} onMouseLeave={this.leave}>
+              <div className='relative' onMouseEnter={this.enter}>
                 <NavLink to='account'>
                   <User />
                 </NavLink>
                 {this.state.isDropOpen && (
-                  <ul className='absolute right-0 top-[100%] mt-2 opacity-80 bg-indigo-300 shadow-lg rounded-md w-[180px] z-10'>
+                  <ul className='absolute right-0 top-[100%] mt-2 opacity-80 bg-indigo-300 shadow-lg rounded-md w-[180px] z-10' onMouseLeave={this.leave}>
                     <li className='px-4 py-2 hover:bg-gray-200 cursor-pointer'>Manage My Account</li>
                     <li className='px-4 py-2 hover:bg-gray-200 cursor-pointer'>My Order</li>
                     <li className='px-4 py-2 hover:bg-gray-200 cursor-pointer'>My Cancellations</li>
