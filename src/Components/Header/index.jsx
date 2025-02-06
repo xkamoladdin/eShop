@@ -3,10 +3,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { NavLink } from 'react-router-dom';
 import { ChevronRight, ArrowRight } from 'lucide-react';
-import iPhone from'../../assets/iPhone.png'
 import Apple from'../../assets/apple.png'
+import carousel from '../../mock';
 
 export default class index extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      data: carousel,
+    }
+  }
   render() {
     return (
       <div className='container mt-[40px] flex justify-between mb-[140px]'>
@@ -41,111 +47,40 @@ export default class index extends Component {
                 </li>
             </ul>
         </div>
-        <Swiper
-      spaceBetween={10}
-      slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
-      className='max-w-[892px] w-full'
-    >
-      <SwiperSlide className=''>
-        <div className='flex justify-between p-[64px] items-center bg-black'>
-          <div>
-            <span className='flex items-center gap-[24px]'>
-              <img src={Apple} alt="" />
-              <h3 className='text-white'>iPhone 14 Series</h3>
-            </span>
-            <h2 className='text-[45px] mt-[20px] mb-[27px] font-semibold text-white'>Up to 10% off Voucher</h2>
-            <div className='flex text-white items-center gap-2'>
-              <NavLink to='/' className='font-medium border-b-2 border-white text-white'>Shop Now</NavLink>
-              <ArrowRight />
-            </div>
-          </div>
-          <img src={iPhone} alt="" />
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className=''>
-        <div className='flex justify-between p-[64px] items-center bg-black'>
-          <div>
-            <span className='flex items-center gap-[24px]'>
-              <img src={Apple} alt="" />
-              <h3 className='text-white'>iPhone 15 Series</h3>
-            </span>
-            <h2 className='text-[45px] mt-[20px] mb-[27px] font-semibold text-white'>Up to 10% off Voucher</h2>
-            <div className='flex text-white items-center gap-2'>
-              <NavLink to='/' className='font-medium border-b-2 border-white text-white'>Shop Now</NavLink>
-              <ArrowRight />
-            </div>
-          </div>
-          <img src={iPhone} alt="" />
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className=''>
-        <div className='flex justify-between p-[64px] items-center bg-black'>
-          <div>
-            <span className='flex items-center gap-[24px]'>
-              <img src={Apple} alt="" />
-              <h3 className='text-white'>iPhone 16 Series</h3>
-            </span>
-            <h2 className='text-[45px] mt-[20px] mb-[27px] font-semibold text-white'>Up to 10% off Voucher</h2>
-            <div className='flex text-white items-center gap-2'>
-              <NavLink to='/' className='font-medium border-b-2 border-white text-white'>Shop Now</NavLink>
-              <ArrowRight />
-            </div>
-          </div>
-          <img src={iPhone} alt="" />
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className=''>
-        <div className='flex justify-between p-[64px] items-center bg-black'>
-          <div>
-            <span className='flex items-center gap-[24px]'>
-              <img src={Apple} alt="" />
-              <h3 className='text-white'>iPhone 13 Series</h3>
-            </span>
-            <h2 className='text-[45px] mt-[20px] mb-[27px] font-semibold text-white'>Up to 10% off Voucher</h2>
-            <div className='flex text-white items-center gap-2'>
-              <NavLink to='/' className='font-medium border-b-2 border-white text-white'>Shop Now</NavLink>
-              <ArrowRight />
-            </div>
-          </div>
-          <img src={iPhone} alt="" />
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className=''>
-        <div className='flex justify-between p-[64px] items-center bg-black'>
-          <div>
-            <span className='flex items-center gap-[24px]'>
-              <img src={Apple} alt="" />
-              <h3 className='text-white'>iPhone 12 Series</h3>
-            </span>
-            <h2 className='text-[45px] mt-[20px] mb-[27px] font-semibold text-white'>Up to 10% off Voucher</h2>
-            <div className='flex text-white items-center gap-2'>
-              <NavLink to='/' className='font-medium border-b-2 border-white text-white'>Shop Now</NavLink>
-              <ArrowRight />
-            </div>
-          </div>
-          <img src={iPhone} alt="" />
-        </div>
-      </SwiperSlide>
-      <SwiperSlide className=''>
-        <div className='flex justify-between p-[64px] items-center bg-black'>
-          <div>
-            <span className='flex items-center gap-[24px]'>
-              <img src={Apple} alt="" />
-              <h3 className='text-white'>iPhone 11 Series</h3>
-            </span>
-            <h2 className='text-[45px] mt-[20px] mb-[27px] font-semibold text-white'>Up to 10% off Voucher</h2>
-            <div className='flex text-white items-center gap-2'>
-              <NavLink to='/' className='font-medium border-b-2 border-white text-white'>Shop Now</NavLink>
-              <ArrowRight />
-            </div>
-          </div>
-          <img src={iPhone} alt="" />
-        </div>
-      </SwiperSlide>
-    </Swiper>
+
+
+       
+
+             
+        <Swiper spaceBetween={10} slidesPerView={1} className='max-w-[892px] w-full'>
+          {this.state.data.map(({ id, model, text, img }) => (
+            <SwiperSlide key={id}>
+              <div className='flex justify-between p-[64px] items-center bg-black'>
+                <div>
+                  <span className='flex items-center gap-[24px]'>
+                    <img src={Apple} alt="Apple Logo" />
+                    <h3 className='text-white'>{model}</h3>
+                  </span>
+                  <h2 className='text-[45px] mt-[20px] mb-[27px] font-semibold text-white'>
+                    {text}
+                  </h2>
+                  <div className='flex text-white items-center gap-2'>
+                    <NavLink to='/' className='font-medium border-b-2 border-white text-white'>
+                      Shop Now
+                    </NavLink>
+                    <ArrowRight />
+                  </div>
+                </div>
+                <img src={img} alt="iPhone" />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+             
+             
       </div>
     )
   }
 }
+
+
