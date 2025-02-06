@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom';
-import qrCode from '../../assets/qrcode.png';
+import qrcode from '../../assets/qrcode1.png';
+import googlee from '../../assets/google1.png';
+import appstore from '../../assets/appstore.png';
 import { Facebook, Twitter, Instagram, Linkedin, SendHorizontal } from 'lucide-react';
 
 export default class index extends Component {
@@ -41,7 +43,16 @@ export default class index extends Component {
             <div className='flex flex-col gap-[20px]'>
               <NavLink to={'/'} className='text-[20px] font-medium text-[#FAFAFA]'>Download App</NavLink>
               <p>Save $3 with App New User Only</p>
-              <img src={qrCode} alt="" />
+              <div className='flex items-center'>
+                <div>
+                  <img className='w-[80px]' src={qrcode} alt="" />
+                </div>
+                <div className='px-[8px]'>
+                  <NavLink to={'/'}>{}<img className='w-[104px]' src={googlee} alt="" /></NavLink>
+                  <NavLink to={'/'}>{}<img className='w-[104px] py-[9px]' src={appstore} alt="" /></NavLink>
+                </div>
+              </div>
+              {/* <img src={qrCode} alt="" /> */}
               <span className='flex gap-[30px]'><Facebook /><Twitter /><Instagram /><Linkedin /></span>
             </div>
         </div>
