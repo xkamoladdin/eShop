@@ -36,7 +36,7 @@ export default class Index extends Component {
           spaceBetween={30}
           slidesPerView={4}
           navigation
-          pagination={{ clickable: true }}
+          // pagination={{ clickable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
           className="w-full mb-[140px]"
