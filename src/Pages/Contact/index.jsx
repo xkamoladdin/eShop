@@ -6,7 +6,7 @@ export default class index extends Component {
   render() {
     return (
       <div className='container mt-[181px] mb-[140px]'>
-        <div className='flex gap-[30px]'>
+        <div className='md:flex gap-[30px]'>
         <div className='contact max-w-[355px] w-full pt-[40px] pl-[35px] pb-[51px] pr-[20px]'>
           <div>
       <span className='flex items-center gap-[16px] mb-[24px]'>
@@ -35,9 +35,9 @@ export default class index extends Component {
 
 
         <form className='contact px-[31px] py-[40px]'>
-            <div className='flex gap-[16px] mb-[32px]'>
-            <input className='bg-[#F5F5F5] px-[16px] py-[13px] rounded' type="text" placeholder='Name'/>
-            <input className='bg-[#F5F5F5] px-[16px] py-[13px] rounded' type="email" placeholder='Your Email'/>
+            <div className='md:flex gap-[16px] mb-[32px]'>
+            <input className='bg-[#F5F5F5] px-[16px] py-[13px] rounded mb-[15px]' type="text" placeholder='Name'/>
+            <input className='bg-[#F5F5F5] px-[16px] py-[13px] rounded mb-[15px]' type="email" placeholder='Your Email'/>
             <input className='bg-[#F5F5F5] px-[16px] py-[13px] rounded' type="phone" placeholder='Your Phone'/>
             </div>
             {/* <input className='bg-[#F5F5F5] px-[16px] pt-[13px] pb-[170px] rounded w-full' type="massage" placeholder='Your Massage'/> */}
