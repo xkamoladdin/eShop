@@ -57,8 +57,8 @@ export default class index extends Component {
 
           <div className='flex mt-[24px]'>
           <h3 className='mr-[24px] '>Colours:</h3>
-          <button className='bg-[#A0BCE0] w-5 h-5 rounded-full mr-[8px]'></button>
-          <button className='bg-[#E07575] w-5 h-5 rounded-full'></button>
+          <button className='bg-[#A0BCE0] w-5 h-5 rounded-full mr-[8px] hover:border-2 border-black'></button>
+          <button className='bg-[#E07575] w-5 h-5 rounded-full hover:border-2 border-black'></button>
           </div>
           <div className='flex items-center gap-[16px] mt-[24px]'>
           <h3>Size:</h3>
@@ -77,7 +77,7 @@ export default class index extends Component {
         <button className='flex justify-center items-center text-[30px] w-[40px] h-[44px] hover:bg-[#DB4444] hover:text-white hover:rounded border-l-2 border-[#494949] hover:border-none'>+</button>
         </span>
 
-        <button className='bg-[#DB4444] px-[48px] py-[12px] text-white rounded'>Buy Now</button>
+        <button className='inline-block font-medium text-[#FAFAFA] bg-[#DB4444] py-[10px] px-[38px] rounded border-[#DB4444] border duration-300 hover:bg-transparent hover:text-[#DB4444]'>Buy Now</button>
         <span className='px-[9px] py-[10px] border-2 border-[#494949] rounded'><Heart /></span>
           </div>
 
