@@ -18,6 +18,12 @@ export default class index extends Component {
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           className="w-full mb-[70px]"
+          breakpoints={{
+            320: { slidesPerView: 1, spaceBetween: 10 },
+            480: { slidesPerView: 2, spaceBetween: 15 },
+            768: { slidesPerView: 4, spaceBetween: 20 },
+            1024: { slidesPerView: 6, spaceBetween: 25 },
+          }}
         >
             <SwiperSlide className="w-[170px] border p-[24px]">
                 <div className='text-center h-[145px] flex justify-center items-center flex-col'>

@@ -4,7 +4,7 @@ import 'swiper/css';
 import { NavLink } from 'react-router-dom';
 import { ChevronRight, ArrowRight } from 'lucide-react';
 import Apple from'../../assets/apple.png'
-import carousel from '../../mock';
+import carousel from '../../JS/header';
 
 export default class index extends Component {
   constructor(props) {
