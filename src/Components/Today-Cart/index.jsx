@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import Game1 from'../../assets/game-card1.png'
-import Game2 from'../../assets/game-card2.png'
-import Game3 from'../../assets/game-card3.png'
-import Game4 from'../../assets/game-card4.png'
 import { NavLink } from "react-router-dom";
 import { Heart, Eye } from 'lucide-react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import carousel from '../../JS/today';
+
 
 
 // Import Swiper styles
@@ -20,6 +18,7 @@ export default class Index extends Component {
       super(props);
       this.state = {
         timeLeft: 300000, // 300000 sekund (taxminan 3.5 kun)
+        data: carousel,
       };
     }
   
@@ -73,67 +72,25 @@ export default class Index extends Component {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
           className="w-full mb-[60px]"
+          breakpoints={{
+            320: { slidesPerView: 1, spaceBetween: 10 },
+            480: { slidesPerView: 2, spaceBetween: 15 },
+            768: { slidesPerView: 3, spaceBetween: 20 },
+            1024: { slidesPerView: 4, spaceBetween: 25 },
+          }}
         >
-            <SwiperSlide className="w-[270px]">
+          {this.state.data.map(({ id, model, dis, img, price, del }) => (
+            <SwiperSlide className="w-[270px]" key={id}>
                 <div className="w-full h-[250px] bg-[#F5F5F5] flex justify-center items-center relative">
-                    <span className="text-[12px] text-[#FAFAFA] px-[12px] py-[4px] bg-[#DB4444] rounded absolute top-[12px] left-[12px]">-40%</span>
+                    <span className="text-[12px] text-[#FAFAFA] px-[12px] py-[4px] bg-[#DB4444] rounded absolute top-[12px] left-[12px]">{dis}</span>
                     <span className="flex gap-[8px] flex-col absolute right-[12px] top-[12px]"><p className="bg-white w-[34px] h-[34px] rounded-full flex items-center justify-center"><Heart /></p><p className="bg-white w-[34px] h-[34px] rounded-full flex items-center justify-center"><Eye /></p></span>
-                    <img src={Game1} alt="" />
+                    <img src={img} alt="" />
                 </div>
-                <h2 className="font-medium mt-[16px] mb-[8px]">HAVIT HV-G92 Gamepad</h2>
-                <span className="flex gap-[12px] mb-[8px]"><p className="font-medium text-[#DB4444]">$120</p><del className="font-medium">$160</del></span>
+                <h2 className="font-medium mt-[16px] mb-[8px]">{model}</h2>
+                <span className="flex gap-[12px] mb-[8px]"><p className="font-medium text-[#DB4444]">{price}</p><del className="font-medium">{del}</del></span>
                 <div className="">⭐⭐⭐⭐⭐ (88)</div>
             </SwiperSlide>
-            <SwiperSlide className="w-[270px]">
-                <div className="w-full h-[250px] bg-[#F5F5F5] flex justify-center items-center relative">
-                    <span className="text-[12px] text-[#FAFAFA] px-[12px] py-[4px] bg-[#DB4444] rounded absolute top-[12px] left-[12px]">-35%</span>
-                    <span className="flex gap-[8px] flex-col absolute right-[12px] top-[12px]"><p className="bg-white w-[34px] h-[34px] rounded-full flex items-center justify-center"><Heart /></p><p className="bg-white w-[34px] h-[34px] rounded-full flex items-center justify-center"><Eye /></p></span>
-                    <img src={Game2} alt="" />
-                </div>
-                <h2 className="font-medium mt-[16px] mb-[8px]">AK-900 Wired Keyboard</h2>
-                <span className="flex gap-[12px] mb-[8px]"><p className="font-medium text-[#DB4444]">$960</p><del className="font-medium">$1160</del></span>
-                <div className="">⭐⭐⭐⭐⭐ (75)</div>
-            </SwiperSlide>
-            <SwiperSlide className="w-[270px]">
-                <div className="w-full h-[250px] bg-[#F5F5F5] flex justify-center items-center relative">
-                    <span className="text-[12px] text-[#FAFAFA] px-[12px] py-[4px] bg-[#DB4444] rounded absolute top-[12px] left-[12px]">-30%</span>
-                    <span className="flex gap-[8px] flex-col absolute right-[12px] top-[12px]"><p className="bg-white w-[34px] h-[34px] rounded-full flex items-center justify-center"><Heart /></p><p className="bg-white w-[34px] h-[34px] rounded-full flex items-center justify-center"><Eye /></p></span>
-                    <img src={Game3} alt="" />
-                </div>
-                <h2 className="font-medium mt-[16px] mb-[8px]">IPS LCD Gaming Monitor</h2>
-                <span className="flex gap-[12px] mb-[8px]"><p className="font-medium text-[#DB4444]">$370</p><del className="font-medium">$400</del></span>
-                <div className="">⭐⭐⭐⭐⭐ (99)</div>
-            </SwiperSlide>
-            <SwiperSlide className="w-[270px]">
-                <div className="w-full h-[250px] bg-[#F5F5F5] flex justify-center items-center relative">
-                    <span className="text-[12px] text-[#FAFAFA] px-[12px] py-[4px] bg-[#DB4444] rounded absolute top-[12px] left-[12px]">-25%</span>
-                    <span className="flex gap-[8px] flex-col absolute right-[12px] top-[12px]"><p className="bg-white w-[34px] h-[34px] rounded-full flex items-center justify-center"><Heart /></p><p className="bg-white w-[34px] h-[34px] rounded-full flex items-center justify-center"><Eye /></p></span>
-                    <img src={Game4} alt="" />
-                </div>
-                <h2 className="font-medium mt-[16px] mb-[8px]">S-Series Comfort Chair</h2>
-                <span className="flex gap-[12px] mb-[8px]"><p className="font-medium text-[#DB4444]">$375</p><del className="font-medium">$400</del></span>
-                <div className="">⭐⭐⭐⭐⭐ (88)</div>
-            </SwiperSlide>
-            <SwiperSlide className="w-[270px]">
-                <div className="w-full h-[250px] bg-[#F5F5F5] flex justify-center items-center relative">
-                    <span className="text-[12px] text-[#FAFAFA] px-[12px] py-[4px] bg-[#DB4444] rounded absolute top-[12px] left-[12px]">-40%</span>
-                    <span className="flex gap-[8px] flex-col absolute right-[12px] top-[12px]"><p className="bg-white w-[34px] h-[34px] rounded-full flex items-center justify-center"><Heart /></p><p className="bg-white w-[34px] h-[34px] rounded-full flex items-center justify-center"><Eye /></p></span>
-                    <img src={Game1} alt="" />
-                </div>
-                <h2 className="font-medium mt-[16px] mb-[8px]">HAVIT HV-G92 Gamepad</h2>
-                <span className="flex gap-[12px] mb-[8px]"><p className="font-medium text-[#DB4444]">$120</p><del className="font-medium">$160</del></span>
-                <div className="">⭐⭐⭐⭐⭐ (88)</div>
-            </SwiperSlide>
-            <SwiperSlide className="w-[270px]">
-                <div className="w-full h-[250px] bg-[#F5F5F5] flex justify-center items-center relative">
-                    <span className="text-[12px] text-[#FAFAFA] px-[12px] py-[4px] bg-[#DB4444] rounded absolute top-[12px] left-[12px]">-40%</span>
-                    <span className="flex gap-[8px] flex-col absolute right-[12px] top-[12px]"><p className="bg-white w-[34px] h-[34px] rounded-full flex items-center justify-center"><Heart /></p><p className="bg-white w-[34px] h-[34px] rounded-full flex items-center justify-center"><Eye /></p></span>
-                    <img src={Game1} alt="" />
-                </div>
-                <h2 className="font-medium mt-[16px] mb-[8px]">HAVIT HV-G92 Gamepad</h2>
-                <span className="flex gap-[12px] mb-[8px]"><p className="font-medium text-[#DB4444]">$120</p><del className="font-medium">$160</del></span>
-                <div className="">⭐⭐⭐⭐⭐ (88)</div>
-            </SwiperSlide>
+             ))}
         </Swiper>
         <div className="flex justify-center mb-[60px]">
             <NavLink to='/allproduct' className='inline-block font-medium text-[#FAFAFA] bg-[#DB4444] py-[16px] px-[48px] rounded border-[#DB4444] border duration-300 hover:bg-transparent hover:text-[#DB4444]'>View All Products</NavLink>
