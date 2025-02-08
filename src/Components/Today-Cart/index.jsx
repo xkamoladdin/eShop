@@ -54,12 +54,12 @@ export default class Index extends Component {
     return (
       <div className="container w-full">
         <div>
-          <h2 className="font-semibold text-[#DB4444] mb-[23px] flex gap-[16px] items-center">
+          <h2 className="font-semibold text-[#DB4444] mb-[23px] flex gap-[16px] items-center text-[13px] md:text-[16px]">
             <span className="w-[20px] h-[40px] bg-[#DB4444] rounded"></span>
             Today’s
           </h2>
           <div className="flex gap-[87px] mb-[40px]">
-            <h1 className="text-[36px] font-semibold">Flash Sales</h1>
+            <h1 className="md:text-[36px] text-[20px] font-semibold">Flash Sales</h1>
             <p className="text-3xl mt-2 font-bold">{this.formatTime(this.state.timeLeft)}</p>
           </div>
         </div>

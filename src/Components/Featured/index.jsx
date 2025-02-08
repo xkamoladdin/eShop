@@ -11,17 +11,17 @@ export default class Index extends Component {
     return (
       <div className='container'>
         <div>
-          <h2 className="font-semibold text-[#DB4444] mb-[23px] flex gap-[16px] items-center">
+          <h2 className="font-semibold text-[#DB4444] mb-[23px] flex gap-[16px] items-center text-[13px] md:text-[16px]">
             <span className="w-[20px] h-[40px] bg-[#DB4444] rounded"></span>
             Featured
           </h2>
           <div className="flex justify-between mb-[60px]">
-            <h1 className="text-[36px] font-semibold">New Arrival</h1>
+            <h1 className="md:text-[36px] text-[20px] font-semibold">New Arrival</h1>
           </div>
         </div>
         
 
-        <div className='flex gap-[30px]'>
+        <div className='flex flex-col md:flex-row gap-[30px]'>
           <div className='max-w-[570px] relative w-full bg-[#0D0D0D] px-[30px] pt-[90px] rounded h-[600px]'>
             <img src={PS5} alt="" />
             <div className='absolute left-0 bottom-0 w-[320px] p-[32px]'>

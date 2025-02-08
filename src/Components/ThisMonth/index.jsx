@@ -22,14 +22,14 @@ export default class Index extends Component {
     return (
       <div className="container w-full">
         <div>
-          <h2 className="font-semibold text-[#DB4444] mb-[23px] flex gap-[16px] items-center">
+          <h2 className="font-semibold text-[#DB4444] mb-[23px] flex gap-[16px] items-center text-[13px] md:text-[16px]">
             <span className="w-[20px] h-[40px] bg-[#DB4444] rounded"></span>
             This Month
           </h2>
           <div className="flex justify-between mb-[60px]">
-            <h1 className="text-[36px] font-semibold">Best Selling Products</h1>
+            <h1 className="md:text-[36px] text-[20px] font-semibold">Best Selling Products</h1>
             <div className="flex justify-center">
-                <NavLink to='/allproduct' className='inline-block font-medium text-[#FAFAFA] bg-[#DB4444] py-[16px] px-[48px] rounded border-[#DB4444] border duration-300 hover:bg-transparent hover:text-[#DB4444]'>View All</NavLink>
+                <NavLink to='/allproduct' className='inline-block font-medium text-[#FAFAFA] bg-[#DB4444] md:py-[16px] md:px-[48px] py-[10px] px-[40px] rounded border-[#DB4444] border duration-300 hover:bg-transparent hover:text-[#DB4444] text-[10px] md:text-[16px]'>View All</NavLink>
             </div>
           </div>
         </div>

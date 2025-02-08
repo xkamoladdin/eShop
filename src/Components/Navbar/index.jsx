@@ -28,7 +28,7 @@ export default class Index extends Component {
         <nav className='border-b border-black'>
           <div className='bg-black'>
             <div className='container relative py-[12px] flex items-center justify-end'>
-              <p className='text-[14px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white'>
+              <p className='md:text-[14px] text-[10px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white'>
                 Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
               </p>
               <select name="" id="" className='bg-black text-white outline-none'>

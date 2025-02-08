@@ -21,12 +21,12 @@ export default class index extends Component {
     return (
       <div className='container mt-[71px]'>
         <div>
-          <h2 className="font-semibold text-[#DB4444] mb-[23px] flex gap-[16px] items-center">
+          <h2 className="font-semibold text-[#DB4444] mb-[23px] flex gap-[16px] items-center text-[13px] md:text-[16px]">
             <span className="w-[20px] h-[40px] bg-[#DB4444] rounded"></span>
             Our Products
           </h2>
           <div className="flex justify-between mb-[60px]">
-            <h1 className="text-[36px] font-semibold">Explore Our Products</h1>
+            <h1 className="md:text-[36px] text-[20px] font-semibold">Explore Our Products</h1>
           </div>
         </div>
 

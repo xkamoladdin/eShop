@@ -8,7 +8,7 @@ export default class index extends Component {
   render() {
     return (
       <div className="container flex justify-between text-center">
-        <div className='flex my-[140px] mx-[70px]'>
+        <div className='flex flex-col md:flex-row my-[140px] mx-[70px]'>
             <div>
                 <img className='bg-[#000] rounded-full p-[12px] my-[24px] mx-[140px]' src={delivery} alt="" />
                 <h3 className='font-semibold text-[20px]'>FREE AND FAST DELIVERY</h3>

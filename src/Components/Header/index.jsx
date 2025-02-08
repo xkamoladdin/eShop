@@ -15,9 +15,9 @@ export default class index extends Component {
   }
   render() {
     return (
-      <div className='container mt-[40px] flex justify-between mb-[140px]'>
+      <div className='container mt-[40px] flex md:flex-row flex-col justify-between mb-[140px]'>
         <div className='border-r pr-[16px] mr-[45px]'>
-            <ul className='flex flex-col gap-[30px]'>
+            <ul className='flex md:flex-col flex-row md:gap-[30px] gap-5 flex-wrap'>
                 <li>
                     <NavLink to={'/'} className='flex items-center w-[217px] justify-between'>Woman’s Fashion<ChevronRight /></NavLink>
                 </li>
@@ -55,7 +55,7 @@ export default class index extends Component {
         <Swiper spaceBetween={10} slidesPerView={1} className='max-w-[892px] w-full'>
           {this.state.data.map(({ id, model, text, img }) => (
             <SwiperSlide key={id}>
-              <div className='flex justify-between p-[64px] items-center bg-black'>
+              <div className='flex flex-col md:flex-row justify-between p-[64px] items-center bg-black'>
                 <div>
                   <span className='flex items-center gap-[24px]'>
                     <img src={Apple} alt="Apple Logo" />

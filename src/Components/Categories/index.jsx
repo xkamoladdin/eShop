@@ -7,11 +7,11 @@ export default class index extends Component {
   render() {
     return (
       <div className='container'>
-          <h2 className="font-semibold text-[#DB4444] mb-[30px] flex gap-[16px] items-center">
+          <h2 className="font-semibold text-[#DB4444] mb-[30px] flex gap-[16px] items-center text-[13px] md:text-[16px]">
             <span className="w-[20px] h-[40px] bg-[#DB4444] rounded"></span>
             Categories
           </h2>
-          <h2 className='text-[36px] font-semibold mb-[60px]'>Browse By Category</h2>
+          <h2 className='md:text-[36px] text-[20px] font-semibold'>Browse By Category</h2>
           <Swiper
           spaceBetween={30}
           slidesPerView={6}
